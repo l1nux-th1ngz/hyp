@@ -1,6 +1,6 @@
 wm: hyprland
 
-launcher: fuzzel
+launcher: rofi
 
 bar: waybar
 
