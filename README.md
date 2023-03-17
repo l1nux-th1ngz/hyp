@@ -10,4 +10,6 @@ font: comfortaa
 
 notifications: mako
 
-![rice](/hypr_rice.png)
+fetch: mithfetch (my script)
+
+![rice](/rice_hypr.png)
