@@ -1,0 +1,18 @@
+/*******************************************************************************
+ * ROUNDED THEME FOR ROFI 
+ * User                 : LR-Tech               
+ * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
+ *******************************************************************************/
+
+* {
+    bg0:    #2b2440;
+    bg1:    #2b2440;
+    bg2:    #2b2440;
+    bg3:    #5D5F88;
+    fg0:    #f5cab8;
+    fg1:    #2b2440;
+    fg2:    #ffffff;
+    fg3:    #ffffff;
+}
+
+@import "rofi-base.rasi"
