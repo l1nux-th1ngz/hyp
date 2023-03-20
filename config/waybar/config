@@ -1,0 +1,97 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "modules-left": [
+        "wlr/workspaces",
+        "hyprland/submap"
+    ],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/recorder", "tray", "pulseaudio", "backlight", "temperature", "cpu", "memory", "battery", "network", "custom/powermenu"],
+    "sway/mode": {
+        "format": " {}"
+    },
+    "wlr/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "disable-markup": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1 <span font='Font Awesome 5 Free 14'> </span>",
+            "2": "2 <span font='Font Awesome 5 Free 14'> </span>",
+            "3": "3 <span font='Font Awesome 5 Free 14'> </span>",
+            "4": "4 <span font='Font Awesome 5 Free 14'> </span>",
+            "5": "5 <span font='Font Awesome 5 Free 14'> </span>",
+            "6": "6 <span font='Font Awesome 5 Free 14'> </span>",
+            "7": "7 <span font='Font Awesome 5 Free 14'> </span>",
+            "8": "8 <span font='Font Awesome 5 Free 14'> </span>",
+            "9": "9 <span font='Font Awesome 5 Free 14'> </span>",
+            "10": "0 <span font='Font Awesome 5 Free 14'> </span>"
+        }
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 8
+    },
+    "clock": {
+        "format": "{:%a %d %b - %H:%M}",
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "︁ {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 15,
+        "format": "<span font='Font Awesome 5 Free 9'>︁</span> {used:0.1f}G/{total:0.1f}G",
+        "tooltip": false
+    },
+    "battery": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}%{time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": " ({H}h{M}m)",
+        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+        "interval": 15,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+    "network": {
+        "format": "{icon}",
+        "format-alt": "<span font='Font Awesome 5 Free 50'></span> ︁{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-left",
+        "format-wifi": "<span font='Font Awesome 5 Free 10'></span> {essid} ({signalStrength}%)",
+        "format-ethernet": "<span font='Font Awesome 5 Free 10'>︁</span> {ifname}",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "<span font='Font Awesome 5 Free 11'>🔊 </span>{volume}%"
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-alt": "{icon}",
+        "format-alt-click": "click-left",
+        "format-icons": ["", ""],
+        "on-scroll-up": "light -A 1",
+        "on-scroll-down": "light -U 1"
+    },
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 75,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°",
+        "tooltip": false,
+        "format-icons": [
+            "", // Icon: temperature-empty
+            "", // Icon: temperature-quarter
+            "", // Icon: temperature-half
+            "", // Icon: temperature-three-quarters
+            ""  // Icon: temperature-full
+        ]
+    }
+}
